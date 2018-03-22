@@ -1,0 +1,1152 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 20px
+	min-width: 320px
+	max-width: 1920px
+	display: block
+	margin: 0 auto
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+/*GLOBAL BEGIN*/
+.wrap-mxw1190
+	max-width: 1190px
+	display: block
+	margin: 0 auto	
+.wrap-mxw1250 
+	max-width: 1250px
+	display: block
+	margin: 0 auto
+.container-wrap-padding
+	padding-left: 15px
+	padding-right: 15px
+ul
+	padding: 0
+	margin: 0
+	list-style-type: none
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+.desc-title
+	text-transform: uppercase
+	font-family: "ProximaNovaLight"
+	font-size: 63px
+	line-height: 1
+	font-weight: 100
+/*GLOBAL END*/
+
+
+
+/*HEADER BEGIN*/
+.header
+	background: url(../img/header_bg.jpg) no-repeat center center
+	background-size: cover
+	height: 100vh	
+	min-height: 850px
+	//max-height: 900px
+	color: white
+	&__header__title
+		margin-bottom: 60px
+	&__title_br
+		display: none
+	&__logo
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.logo-descr
+		margin-bottom: 0
+		font-family: "ProximaNovaBold"
+		font-size: 20px
+		text-transform: uppercase
+		margin-left: 15px
+		letter-spacing: 2px
+		line-height: 1.35
+	&__phone
+		text-align: right
+		font-family: "ProximaNovaSemibold"
+		font-size: 20px
+		padding-right: 5px
+		a
+			color: inherit
+	&__description
+		margin-top: 165px
+		h1
+			text-transform: uppercase
+			font-family: "ProximaNovaBold"
+			font-size: 103px
+			letter-spacing: -0.5px
+			line-height: 1.1
+			span
+				//line-height: 10px
+				display: inline-block
+				height: 10px
+				width: 23px
+				vertical-align: middle
+				margin-bottom: 15px
+				background: #fff
+		p:nth-child(3),
+		p:nth-child(4)
+			font-family: "ProximaNovaRegular"
+			font-size: 20px
+			margin-bottom: 5px
+			letter-spacing: -0.4px
+			line-height: 1.25
+			a
+				font-family: "ProximaNovaSemibold"
+				color: #ffec1f
+	&__button
+		color: #365d62
+		background: white
+		padding: 0.4em 2em
+		border-radius: 24px
+		margin-top: 35px
+		display: inline-block
+
+/*HEADER END*/
+
+
+/* FOLLOW BEGIN */
+.follow
+	background: url(../img/beatchBgAll.png) no-repeat 
+	background-position: top center
+	margin-top: -200px
+	background-size: cover 
+	padding-top: 250px
+	&__title
+		color: $blue
+		margin-bottom: 23px
+	h3
+		font-size: 26px
+		letter-spacing: -0.5px
+	&__slider
+		margin-left: -16%
+		margin-top: -120px
+		margin-right: 3.5%
+		width: 67%
+		display: inline-block
+	.testimonials__item
+		margin: 0 30px
+		&:focus
+			outline: 0
+	.testimonials-photo
+		margin-bottom: 28px
+		img
+			//max-width: 775px
+			height: auto
+			max-width: 100%
+			width: 100%
+			display: block
+			border-radius: 50%
+			margin: 0 auto
+	// Dots
+	.slick-dotted.slick-slider
+		margin-bottom: 30px
+
+	.slick-dots
+		position: absolute
+		bottom: 80px
+		display: block
+		width: 100%
+		padding: 0
+		margin: 0
+		list-style: none
+		text-align: center
+		li
+			position: relative
+			display: inline-block
+			width: 20px
+			height: 20px
+			margin: 0 5px
+			padding: 0
+			cursor: pointer
+			button
+				width: 20px
+				height: 20px
+				border-radius: 50%
+				border: none
+				font-size: 0
+				line-height: 0
+				display: block
+				padding: 0px
+				cursor: pointer
+				color: transparent
+				outline: none
+				background: white
+				&:before
+					color: white
+					opacity: 0
+				&:hover, &:focus
+					outline: none
+				&:hover:before, &:focus:before
+					opacity: 0
+
+			&.slick-active button
+				opacity: 0.7
+				color: black
+				background: white
+				transform: scale(1.3)
+				&:before
+					color: white
+					opacity: 0
+		//end slick
+	&__left
+		margin-top: 55px
+		width: 45%
+		display: inline-block
+		vertical-align: top
+	&__desc
+		letter-spacing: -0.4px
+		line-height: 1.4
+		margin-bottom: 19px
+	&__scheduleWrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: flex-start
+	&__plan,
+	&__calendar
+		background-repeat: no-repeat
+		background-position: left center
+	&__plan
+		padding-left: 40px
+		letter-spacing: -0.4px
+		margin-right: 5%
+	&__calendar
+		padding-left: 30px
+		padding-top: 3px
+	&__buttonsWrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 20px
+		margin-bottom: 20px
+	&__price
+		font-size: 26px
+		color: $blue
+	&__book,
+	&__schedule
+		font-size: 20px
+		border-radius: 24px
+		padding: 0.35em 1.1em
+	&__book
+		color: white
+		background: rgb(255, 128, 66)
+	&__schedule
+		border: 1px solid $blue
+		color: black
+	&__addDesc
+		font-size: 16px
+		color: #2d4042
+		line-height: 1.2
+		margin-top: 30px
+	&__list
+		margin-top: 40px
+		li
+			letter-spacing: -0.4px
+			padding: 3px 0
+			color: $blue
+			span
+				white-space: nowrap
+/* FOLLOW END */
+
+
+/* TRAVELS&FITNES BEGIN */
+.travels
+	background: url(../img/travels_bgNarrow.png) top center
+	//padding-top: 100px
+	padding-bottom: 420px
+	background-size: cover
+	color: white
+	&__title
+		letter-spacing: 1px
+		margin-top: 150px
+	h4
+		font-size: 25px
+		line-height: 1.25
+		margin-top: 35px
+		margin-bottom: 15px
+	p
+		line-height: 1.35
+		letter-spacing: 0.25px
+		//margin-bottom: 230px
+/* TRAVELS&FITNES END */
+
+
+/* FOTO-VIDEO BEGIN */
+.fotoVideo
+	margin-top: -220px
+	position: relative
+	z-index: 1
+	&__descr
+		margin-bottom: 50px
+		line-height: 1.25
+	&__title
+		color: $blue
+		margin-bottom: 10px
+		letter-spacing: 1px
+.video__wrapper
+	background: white
+	width: 100%
+	height: auto
+	//max-height: 100%
+	margin: 0 auto
+	position: relative
+	border-radius: 24px 24px 0 0
+	.video
+		width: 100%
+		height: auto
+		max-height: 100%
+		&__playButton
+			width: 100%	
+			height: 100%	
+			box-sizing: border-box
+			padding: 10px calc(50% - 27px)
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0.7
+			cursor: pointer
+			transition: opacity 150ms
+			&:hover
+				opacity: 1
+video
+	//add poster for responsive
+	//background: url("http://o-planete.ru/wp-content/uploads/2012/12/%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD-.jpg")
+	//background-size: cover
+	border-radius: 24px 24px 0 0
+.hidden
+	display: none
+
+
+/*FOTOGALLERY FANCYBOX BEGIN*/
+.alboms
+	//display: flex
+	//flex-wrap: wrap
+	//justify-content: space-between
+	//align-items: center
+	//margin: 0 auto
+	&__item
+		//border: 1px solid red
+		position: relative
+		overflow: hidden
+		transition: 0.5s Ease
+		width: 100%
+		height: auto
+		margin-bottom: 20px
+		img
+			width: 100%
+			height: auto
+			max-width: 100%
+	&__itemCaption
+		//border: 1px solid blue
+		transition: 0.5s Ease
+		position: absolute
+		top: 0
+		//bottom: 0
+		left: 0
+		right: 0
+		height: 100%
+		width: 100%
+		margin-top: -350px
+		//margin-top: 0
+		text-align: center
+		background: rgba(0,0,0,.5)
+	&__item:hover > .alboms__itemCaption
+		margin-top: 0
+	&__itemDescription
+		//outline: 3px solid red
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-right: -50%
+		transform: translate(-50%, -50%)
+		padding: 5px
+	&__title
+		color: white
+		font-size: 24px
+		font-weight: normal
+		line-height: 1.2
+	&__description
+		font-size: 20px
+		color: white
+		line-height: 1.2
+	&__button
+		border: 2px solid rgb(255,235,64)
+		border-radius: 24px
+		padding: 5px 15px
+		display: inline-block
+		background: rgba(255,239,66, 0)
+		color: white
+		&:hover
+			transition: 0.5s Ease
+			background: rgba(0,0,0,.5)
+			color: #fff
+
+/*FOTOGALLERY FANCYBOX END*/
+
+/* FOTO-VIDEO END */
+
+
+
+/* YOU-GET BEGIN */
+.youGet
+	background: url(../img/you_getAll.png) no-repeat center center
+	padding-top: 200px
+	padding-bottom: 490px
+	background-size: cover
+	color: white
+	margin-bottom: -250px
+	position: relative
+	z-index: 1
+	&__title
+		margin-bottom: 70px
+	&__itemWrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+	&__item
+		padding-top: 50px
+		background: url(../img/fitness.png) no-repeat top center
+		text-align: center
+		line-height: 1.25
+		max-width: 25%
+		margin: 0 auto
+		flex: 0 0 25%
+		p
+			margin-top: 30px
+/* YOU-GET END */
+
+
+/*REVIEW BEGIN*/
+.reviews
+		padding-top: 40px
+		padding-bottom: 100px
+.reviews__title
+	color: #ff7d3f
+	margin: 10px 0 90px 0
+
+/* BEGIN SLIDER */
+.testimonials
+	padding: 12px 20px 50px 
+	position: relative
+.testimonials__item
+	margin: 0 30px
+	&:focus
+		outline: 0
+.testimonials-text
+	font-family: $default-font
+	font-size: 20px
+	font-weight: 400
+	color: #2d4042
+	line-height: 26px
+	padding-top: 0px
+	max-width: 300px
+	margin: 0 auto
+	text-align: center
+	&:focus
+		outline: 0
+.testimonials-photo
+	margin-bottom: 45px
+	img
+		width: 100%	
+		height: auto
+		max-width: 350px
+		border-radius: 50%
+		margin: 0 auto
+
+.testimonials-author
+	color: black
+	font-size: 26px
+	font-family: $default-font
+	font-weight: bold
+	text-align: center
+	margin-bottom: 10px
+	line-height: 1.2
+
+//begin slick https://kenwheeler.github.io/slick/
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	user-select: none
+	-webkit-touch-callout: none
+	-khtml-user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	display: block
+	overflow: hidden
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider
+	.slick-track, .slick-list
+		transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	top: 0
+	left: 0
+	display: block
+	&:before
+		display: table
+		content: ''
+	&:after
+		display: table
+		content: ''
+		clear: both
+
+.slick-loading .slick-track
+	visibility: hidden
+
+.slick-slide
+	display: none
+	float: left
+	height: 100%
+	min-height: 1px
+	&:focus 
+		outline: 0
+
+.slick-slide
+	img
+		display: block
+		margin: 0 auto
+	&.slick-loading img
+		display: none
+	&.dragging img
+		pointer-events: none
+
+.slick-initialized .slick-slide
+	display: block
+
+.slick-loading .slick-slide
+	visibility: hidden
+
+.slick-vertical .slick-slide
+	display: block
+	height: auto
+	border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+	display: none
+
+//slick theme
+
+// Arrows
+
+.slick-prev, .slick-next
+	font-size: 0
+	line-height: 0
+	z-index: 2
+	position: absolute
+	top: 40%
+	display: block
+	width: 46px
+	height: 31px
+	padding: 0
+	//transform: translate(0, -50%)
+	cursor: pointer
+	opacity: .7
+	border: none
+	outline: none
+
+.slick-prev,
+.slick-next
+	&:hover, &:focus
+		outline: none
+		opacity: 1
+
+.slick-prev
+	//background: url(../img/arrow-left.png) no-repeat
+	content: '>'
+	&:hover:before, &:focus:before
+		opacity: 1
+.slick-next
+	background: url(../img/arrow-right.png) no-repeat
+	&:hover:before, &:focus:before
+		opacity: 1
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+	opacity: .25
+
+.slick-prev:before, .slick-next:before
+	//font-size: 20px
+	//line-height: 1
+	opacity: .75
+	//color: blue
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	position: absolute
+
+.slick-prev
+	left: -50px
+
+.slick-prev:before
+	content: '<'
+	font-size: 20px
+	background: #ff7e3f
+	color: white
+	font-weight: bold
+	font-family: "ProximaNovaBlack"
+	padding: 2px 8px
+	border-radius: 50%
+
+
+
+.slick-next
+	right: -25px
+
+.slick-next:before
+	content: '>'
+	font-size: 20px
+	background: #ff7e3f
+	color: white
+	font-weight: bold
+	font-family: "ProximaNovaBlack"
+	padding: 2px 8px
+	border-radius: 50%
+
+// Dots
+.slick-dotted.slick-slider
+	margin-bottom: 30px
+
+.slick-dots
+	position: absolute
+	bottom: -25px
+	display: block
+	width: 100%
+	padding: 0
+	margin: 0
+	list-style: none
+	text-align: center
+	li
+		position: relative
+		display: inline-block
+		width: 20px
+		height: 20px
+		margin: 0 5px
+		padding: 0
+		cursor: pointer
+		button
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			border: 1px solid red
+			font-size: 0
+			line-height: 0
+			display: block
+			padding: 0px
+			cursor: pointer
+			color: transparent
+			outline: none
+			background: greenga
+			&:hover, &:focus
+				outline: none
+			&:hover:before, &:focus:before
+				opacity: 1
+
+		&.slick-active button
+			opacity: .75
+			color: black
+			background: red
+			transform: scale(1.5)
+//end slick
+
+/* END SLIDER */
+
+
+/*REVIEW END*/
+
+
+
+/* INSTAGRAM BEGIN */
+.galleryInside
+	//display: none
+	img
+		width: 100%
+		display: block
+		margin: 10px auto
+		height: auto
+	.my__row
+		margin-left: -10px
+		margin-right: -10px
+	.my_margin
+		padding: 0 10px
+.galleryInside__right
+	//margin-left: 30px
+
+
+
+/* SECTION SLICK WITH GALLERY END */
+
+
+
+//GALLERY BEGIN
+.image-gallery
+	display: none
+.image-gallery__descr
+	letter-spacing: -0.3px
+.image-gallery__title
+	//margin-top: 0
+	//padding-top: 0
+	//line-height: 50px
+	letter-spacing: 1px
+	margin-bottom: 15px
+.image-gallery__btn
+	display: inline-block
+	border-radius: 24px
+	padding: 0.35em 1.8em
+	border: 2px solid $blue
+	color: black
+	margin-top: 18px
+	margin-bottom: 50px
+	&:hover
+		color: black
+.image-gallery__link
+	color: $blue
+	&:hover
+		color: $blue
+.image-gallery
+	//margin: 0 auto
+.thumbnails
+	margin-left: 20px
+	text-align: left
+
+.wrap-primary
+	width: 100%
+	height: 567px
+	overflow: hidden
+	border-radius: 28px 0 0 28px 
+.primary
+	width: 100%
+	height: auto
+	max-width: 100%
+	background-color: #cccccc
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+
+
+.thumbnail:hover .thumbnail-image, .selected .thumbnail-image
+	//border: 4px solid red
+.thumbnail
+	height: 150px
+	width: 100%
+.thumbnail-image
+	width: 90%
+	margin: 0 10px
+	height: 150px
+	overflow: hidden
+	margin: 10px auto
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	//border: 4px solid transparent
+	img
+		width: 100%
+		height: auto
+		max-width: 100%
+
+//GALLERY END
+
+/* INSTAGRAM END */
+
+
+/* MAP BEGIN */
+.myMap__container
+	img
+		width: 100%
+		height: auto
+.myMap__title
+	margin-bottom: -100px
+	margin-top: 50px
+/* MAP END */
+
+
+/* FOOTER BEGIN */
+.footer
+	display: none
+	background: url(../img/footer_bg.png) no-repeat
+	background-size: cover
+	padding-top: 200px
+	padding-bottom: 75px
+	color: #fff
+	&__wrapTop
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 45px
+		border-bottom: 1px solid rgba(255,255,255,0.5)
+	&__social
+		font-family: 'Fontello'
+		background: #fff
+		display: inline-block
+		text-align: center
+		width: 38px
+		height: 38px
+		line-height: 40px
+		border-radius: 50%
+		color: #21353e
+		font-size: 24px
+		font-weight: bold
+		&:hover
+			background: yellow
+	.icon-facebook:before
+		content: '\f09a'
+	.icon-instagram:before
+		content: '\f16d'
+	.icon-vkontakte:before
+		content: '\f189'
+
+
+	.icon-phone:before
+		content: '\e800'
+	.icon-whatsapp:before
+		content: '\f232'
+	.icon-vkontakte:before
+		content: '\f189'
+	&__tel
+		color: white
+		&:hover
+			color: yellow
+
+	&__wrapBottom
+		padding-top: 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	&__logo
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.logo-descr
+		margin-bottom: 0
+		font-family: "ProximaNovaBold"
+		font-size: 20px
+		text-transform: uppercase
+		margin-left: 15px
+		letter-spacing: 2px
+		line-height: 1.35
+	.fitnes-park
+		text-transform: uppercase
+		padding-top: 5px
+	&__adress
+		margin-bottom: 0
+		padding-top: 5px
+	&__mail
+		padding-top: 5px
+		a
+			color: white
+.formNewsletter
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	&__email input
+		border: 2px solid white
+		border-radius: 24px
+		color: #788c95
+		background: transparent
+		padding: 5px 26px
+	&__submit input
+		border-radius: 24px
+		border: none
+		background: white
+		color: #21353e
+		padding: 7px 26px
+		margin-left: -45px
+
+
+/* FOOTER END */
+
+
+*
+	//outline: $o
+.sectionPopapRinder
+	background: #000
+
+
+/*POPUP BEGIN*/
+
+.sectionPopapRinder
+	.cd-popup
+		position: fixed
+		z-index: 1000
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+		overflow-y: scroll
+		padding-bottom: 0px
+		background-color: rgba(255, 255, 255, 0.7)
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s 0s, visibility 0s 0.3s
+		&.is-visible
+			opacity: 1
+			visibility: visible
+			transition: opacity 0.3s 0s, visibility 0s 0s
+	
+	.cd-popup-container
+		position: relative
+		z-index: 1000
+		width: 95%
+		min-width: 350px
+		max-width: 1180px
+		margin: 100px auto
+		background: #ffbf34
+		transform: translateY(-40px)
+		// Force Hardware Acceleration in WebKit
+		-webkit-backface-visibility: hidden
+		-webkit-transition-property: -webkit-transform
+		transition-property: transform
+		transition-duration: 0.3s
+		font-size: 0
+	.cd-popup-container .cd-popup-close
+		position: absolute
+		top: 8px
+		right: 8px
+		width: 30px
+		height: 30px
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 12px
+			width: 14px
+			height: 3px
+			background-color: black
+		&::before
+			transform: rotate(45deg)
+			left: 8px
+		&::after
+			transform: rotate(-45deg)
+			right: 8px
+	
+	.is-visible .cd-popup-container
+		transform: translateY(0)
+
+
+	.PopapKinderLeft
+		display: inline-block
+		width: 49%
+		vertical-align: middle
+		height: 100%
+		min-height: 400px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		background-image: url(../img/beach.png)	
+		margin-left: 1%
+	.PopapKinderRight
+		display: inline-block
+		width: 50%
+		background-color: #ffbf34		
+		vertical-align: middle
+		padding: 40px
+	.sectionPopapRinder__Center_wrap2
+		margin: 0px 0 0px 12px
+	.sectionPopapRinder__caption3
+		color: #fff
+		font-size: 24px
+		margin: 0 0 10px 0
+		font-family: $default-font
+		font-weight: 700
+		text-transform: uppercase
+	.sectionPopapRinder__Center_wrap3
+		margin: 5px 23px 0 0
+		max-width: 400px
+		width: 100%
+	.sectionPopapRinder__Center_wrap4
+		margin: 13px 0 0 0
+		width: 100%
+	.sectionPopapRinder__NameForm,
+	.sectionPopapRinder__TelForm
+		width: 100%
+		padding: 5px 1px
+		border: 0
+		border-bottom: solid #FFCD00 3px
+		background-color: transparent
+		color: #fff
+		font-size: 20px
+	.sectionPopapRinder__NameForm::-webkit-input-placeholder,
+	.sectionPopapRinder__TelForm::-webkit-input-placeholder
+		color: #fff
+		opacity: 1
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 20px
+	.sectionPopapRinder__NameForm:-moz-placeholder,
+	.sectionPopapRinder__TelForm:-moz-placeholder
+		color: #fff
+		opacity: 1
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 20px	
+	.sectionPopapRinder__NameForm::-moz-placeholder,
+	.sectionPopapRinder__TelForm::-moz-placeholder
+		color: #fff
+		opacity: 1
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 20px	
+	.sectionPopapRinder__NameForm:-ms-input-placeholder,
+	.sectionPopapRinder__TelForm:-ms-input-placeholder		
+		color: #fff
+		opacity: 1
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 20px	
+	.sectionPopapRinder__NameForm:focus,
+	.sectionPopapRinder__TelForm:focus
+		outline: none
+		border-bottom: solid $green 3px
+	.sectionPopapRinder__textForm
+		margin: 0
+		padding: 0 0 0 38px
+		color: #fff
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 15px	
+	input.sectionPopapRinder__checkboxForm
+		opacity: 0
+		position: relative
+		margin: 10px 0
+	label.sectionPopapRinder__LabelForm
+		display: inline-block
+		cursor: pointer
+		position: relative
+		font-size: 15px
+		margin: 5px
+		vertical-align: top
+		left: -20px
+	label.sectionPopapRinder__LabelForm:before 
+		content: ""
+		display: inline-block
+		width: 18px
+		height: 18px
+		left: 4px
+		top: 4px
+		margin: 0 0 0 0
+		position: absolute
+		bottom: 1px
+		background-color: #fff
+	input.sectionPopapRinder__checkboxForm[type=checkbox]:checked + label.sectionPopapRinder__LabelForm:before
+		content: "\2713"
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
+		font-size: 30px
+		color: #444
+		text-align: center
+		line-height: 15px
+		position: absolute
+		font-weight: 900
+	.sectionPopapRinder__Center_wrap5
+		margin: 30px 0 0 0
+	.sectionPopapRinder__SubmitForm
+		background-color: #f28223
+		padding: 8px 36px
+		color: #fff
+		//font-family: 'Montserrat', sans-serif
+		font-weight: 400
+		font-size: 20px
+		border: 0
+		outline: none
+		border-radius: 4px
+		transition: all 0.5s		
+	.sectionPopapRinder__SubmitForm:hover
+		background-color: #da7d2f						
+		transition: all 0.5s
+
+
+
+
+
+
+@import "media" // Всегда в конце
